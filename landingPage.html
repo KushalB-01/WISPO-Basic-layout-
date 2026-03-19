@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wispo - Whisper of Support</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8fbfc, #eef7f7);
+      color: #0f172a;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .logo img {
+      height: 55px;
+    }
+
+    .nav-btn {
+      background: linear-gradient(135deg, #14b8a6, #22d3ee);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 25px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(20,184,166,0.4);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr; /* text dominates */
+      align-items: center;
+      gap: 40px;
+      padding: 60px 80px;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 520px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-text h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #0f172a, #14b8a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      color: #475569;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      background: linear-gradient(135deg, #14b8a6, #22d3ee);
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(34,211,238,0.4);
+    }
+
+    .video-wrapper {
+      background: linear-gradient(135deg, rgba(20,184,166,0.08), rgba(34,211,238,0.08));
+      padding: 20px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video-wrapper video {
+      width: 220px; /* intentionally small and subtle */
+      border-radius: 20px;
+      opacity: 0.9; /* slightly softened */
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .features {
+      padding: 60px;
+      text-align: center;
+    }
+
+    .features h2 {
+      margin-bottom: 40px;
+      font-size: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      width: 260px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(20,184,166,0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #0f172a;
+      color: white;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @media(max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .hero video {
+        margin-top: 10px;
+        width: 85%;
+      }
+    }
+
+      .hero video {
+        margin-top: 30px;
+        width: 90%;
+      }
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.jpg" alt="Wispo Logo">
+    WISPO
+  </div>
+  <button class="nav-btn" onclick="location.href='emotion.html'">Get Started</button>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>WISPO</h2>
+    <h1>Whisper of Support</h1>
+    <p>You don’t have to go through it alone. Wispo is a safe, anonymous space where your feelings are heard and supported.</p>
+    <button class="cta-btn" onclick="location.href='emotion.html'">Start Sharing</button>
+  </div>
+
+  <!-- Replace with your video file -->
+  <div class="video-wrapper">
+    <video autoplay muted loop>
+      <source src="W.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>
+
+<section class="features">
+  <h2>How WISPO Supports You</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>Anonymous Sharing</h3>
+      <p>Express your thoughts freely without fear of judgment.</p>
+    </div>
+    <div class="card">
+      <h3>AI Guidance</h3>
+      <p>Get instant emotional support anytime you need.</p>
+    </div>
+    <div class="card">
+      <h3>Peer Connection</h3>
+      <p>Connect with people who truly understand you.</p>
+    </div>
+    <div class="card">
+      <h3>Professional Help</h3>
+      <p>Reach experts when you need deeper support.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 WISPO | A safe space for every feeling</p>
+</footer>
+
+  <script>
+    // Smooth page transition
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const target = this.getAttribute('onclick')?.match(/'(.*?)'/);
+        if (target) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = target[1];
+          }, 400);
+        }
+      });
+    });
+  </script>
+
+  <style>
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    body {
+      transition: opacity 0.4s ease;
+    }
+  </style>
+</body>
+</html>
