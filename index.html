@@ -102,12 +102,6 @@
       box-shadow: 0 8px 20px rgba(34,211,238,0.4);
     }
     
-.video-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
     .video-wrapper {
       background: linear-gradient(135deg, rgba(20,184,166,0.08), rgba(34,211,238,0.08));
       padding: 20px;
@@ -124,56 +118,7 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
       animation: float 5s ease-in-out infinite;
     }
-/* 🔥 GOJO GIF */
-.gojo {
-  position: absolute;
-  width: 170px;
-  top: 70%;
-  left: 100%;
-  z-index: 1;
-  pointer-events: none;
 
-  animation: gojoPath 13s infinite;
-}
-
-/* 🔥 CLEAN LINEAR MOVEMENT + PAUSE */
-@keyframes gojoPath {
-
-  /* hidden behind video */
-  0% {
-    opacity: 0;
-    transform: translateX(0);
-  }
-
-  /* appear */
-  10% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  /* 🚀 straight constant movement (NO swing) */
-  60% {
-    opacity: 1;
-    transform: translateX(-75vw);
-  }
-
-  /* 🧍 pause near button (1 sec feel) */
-  75% {
-    opacity: 1;
-    transform: translateX(-75vw);
-  }
-
-  /* 🌫️ fade AFTER reaching */
-  90% {
-    opacity: 0;
-    transform: translateX(-75vw);
-  }
-
-  /* reset */
-  100% {
-    opacity: 0;
-    transform: translateX(0);
-  }
 }
 .features {
   padding: 60px;
