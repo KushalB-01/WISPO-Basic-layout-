@@ -46,5 +46,3 @@ It provides a simple and safe interface where users can select their emotions an
 * Enhance conversation logic and personalization
 
 ---
-
-Kushal Boora
